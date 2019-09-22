@@ -54,7 +54,7 @@ data:
       </parse>
     </source>
   source.files.conf: |-
-     # This fluentd conf file contains sources for log files other than container logs.
+    # This fluentd conf file contains sources for log files other than container logs.
     <source>
       @id dir.log
       @type tail
