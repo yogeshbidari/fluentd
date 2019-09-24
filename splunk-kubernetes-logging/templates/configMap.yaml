@@ -55,22 +55,6 @@ data:
     </source>
   source.files.conf: |-
     # This fluentd conf file contains sources for log files other than container logs.
-    <source>
-      @id dir.log
-      @type tail
-      @label @SPLUNK
-      tag tail.dir.*
-      path /tmp/*.log
-      path_key source
-      read_from_head true
-      <parse>
-        @type json
-        time_key time
-        time_type string
-        time_format %Y-%m-%dT%H:%M:%S.%NZ
-        localtime false
-      </parse>
-    </source>"
   source.journald.conf: |-
     # This fluentd conf file contains configurations for reading logs from systemd journal.
     <source>
