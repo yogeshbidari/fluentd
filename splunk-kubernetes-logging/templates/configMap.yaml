@@ -41,7 +41,7 @@ data:
       @type tail
       @label @SPLUNK
       tag tail.containers.*
-      path /var/log/containers/*.log
+      path /tmp/app/*.log
       pos_file /var/log/splunk-fluentd-containers.log.pos
       path_key source
       read_from_head true
